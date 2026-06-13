@@ -1,16 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
     <audio autoplay loop>
     <source src="" type="audio/mpeg">
     Your browser does not support the audio element.
     </audio>
+    
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
-    <title>NyteLyte</title>
+    <title>Toaster</title>
+
 </head>
+
 <body>
+
     <h1><img src="img/title/maintitle.png" alt="Title"></h1>
 
     <div class = "img_holder" style="text-align: center;" >
@@ -21,44 +28,50 @@
         <img src="img/options/info.png" width="168" height="68.25"/>
     </div>
 
+
     <h1>UNDER CONSTRUCTION</h1>
+
 
     <footer>
         <h2>Website Info:</h2>
-        <p>Current Version:&ensp;<span id="version">Loading...</span></p>
+        <p>Current Version:&ensp;<span id="version">Test</span></p>
         <!-- <p>Commits: <span id="commitCount">Loading...</span></p> -->
-        <p>Time elapsed:&ensp;<span id="elapsedTime">0</span> <span id="timeUnit">seconds</span></p>
+        <p>Time elapsed:&ensp;<span id="elapsedTime">0</span> <span id="timeUnit"></span></p>
         <p></p>
     </footer>
 
+
+
     <!-- script for elapsed time in website -->
-
     <script>
+        // Get saved total time or start at 0
+        let totalTime = parseInt(localStorage.getItem("totalTime")) || 0;
 
-        // Define the version number
-        const version = "Test";
+            const startTime = Date.now();
 
-        // Display the version in the HTML element with id="version"
-        document.getElementById('version').innerText = version;
-
-        // Record the time when the page is loaded
-        const startTime = Date.now();
-
-        // Function to update the elapsed time
         function updateElapsedTime() {
-            const currentTime = Date.now();
-            const elapsedTime = Math.floor((currentTime - startTime) / 1000); // time in seconds
+            const currentSession =
+                Math.floor((Date.now() - startTime) / 1000);
 
-            // Get the appropriate unit (singular or plural)
-            const timeUnit = elapsedTime === 1 ? 'second' : 'seconds';
+            const totalElapsed = totalTime + currentSession;
 
-            // Update the displayed time and unit
-            document.getElementById('elapsedTime').innerText = elapsedTime;
-            document.getElementById('timeUnit').innerText = timeUnit;
-        }
+        document.getElementById('elapsedTime').innerText =
+        totalElapsed;
+    }
 
-        // Update elapsed time every second
+        // Save when leaving page
+    window.addEventListener("beforeunload", () => {
+        const sessionTime =
+        Math.floor((Date.now() - startTime) / 1000);
+
+    totalTime += sessionTime;
+
+    localStorage.setItem("totalTime", totalTime);
+    });
+
         setInterval(updateElapsedTime, 1000);
     </script>
+
 </body>
+
 </html>

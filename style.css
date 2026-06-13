@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Tale'; /* Choose a name for the font */
-    src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
+    font-family: 'Paint'; /* Choose a name for the font */
+    src: url('fonts/paint.ttf') format('truetype'); /* Path to your font file */
 }
 
 main {
@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-    font-family: 'Tale', sans-serif; /* Apply the custom font */
+    font-family: 'Paint', sans-serif; /* Apply the custom font */
     color: white;
 
     letter-spacing: 2px; /* Adjust this value for more or less spacing */
@@ -25,12 +25,12 @@ h1 {
     display: flex; /* Set the display to flex */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
+
 
 }
 
 h2 {
-    font-family: 'Tale', sans-serif; /* Apply the custom font */
+    font-family: 'Paint', sans-serif; /* Apply the custom font */
     color: white;
 
     letter-spacing: 2px; /* Adjust this value for more or less spacing */
@@ -38,37 +38,33 @@ h2 {
     display: flex; /* Set the display to flex */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
-
 }
 
 h3 {
-    font-family: 'Tale', sans-serif; /* Apply the custom font */
+    font-family: 'Paint', sans-serif; /* Apply the custom font */
     color: white;
     letter-spacing: 2px; /* Adjust this value for more or less spacing */
     display: flex; /* Set the display to flex */
-        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
+
 }
 
 p1 {
     color: white;
-    font-family: 'Tale', sans-serif; /* Apply the custom font */
-        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
+    font-family: 'Paint', sans-serif; /* Apply the custom font */
+
 }
 ul {
     color: white;
-    font-family: 'Tale', sans-serif; /* Apply the custom font */
+    font-family: 'Paint', sans-serif; /* Apply the custom font */
     letter-spacing: 2px; 
-        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
+
 }
 
 
 
 p {
     color: rgb(32, 32, 32);
-    font-family: 'Tale', sans-serif; /* Apply the custom font */
-        src: url('fonts/under.otf') format('opentype'); /* Path to your font file */
-
+    font-family: 'Paint', sans-serif; /* Apply the custom font */
     display: flex; /* Set the display to flex */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -87,5 +83,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+#elapsedTime {
+    font-family: 'Paint', sans-serif; /* Apply the custom font */
+    font-size: larger;
 }
 
