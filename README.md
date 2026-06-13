@@ -1,3 +1,2 @@
-This is the official source code for **NiteLyte**. 
-
-This is my own personal website where I post info about myself.
+An attempt at successfully making a nice website for people to know more about me.
+It will also be an attempt at my programming skills.
